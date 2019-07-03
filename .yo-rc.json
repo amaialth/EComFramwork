@@ -1,0 +1,36 @@
+{
+  "generator-jhipster": {
+    "promptValues": {
+      "packageName": "com.anbu"
+    },
+    "jhipsterVersion": "6.1.2",
+    "applicationType": "monolith",
+    "baseName": "EcommmerceFramework",
+    "packageName": "com.anbu",
+    "packageFolder": "com/anbu",
+    "serverPort": "8080",
+    "authenticationType": "jwt",
+    "cacheProvider": "no",
+    "websocket": false,
+    "databaseType": "sql",
+    "devDatabaseType": "oracle",
+    "prodDatabaseType": "oracle",
+    "searchEngine": false,
+    "messageBroker": false,
+    "serviceDiscoveryType": false,
+    "buildTool": "maven",
+    "enableSwaggerCodegen": false,
+    "jwtSecretKey": "MTBlN2JhMmVmYjc4NGU5MzM0ZDFmNWE4MjJiMjBiNmU0OGM4MjdlNGFhYWJiMGZiYzA4YmVlYmE2NzVhODdhMzQwMDkzN2YzN2QwNTcxMGExZGY2NWQyMTQ2YmYwYTg0MjdlOWJkYzUxNDZjZDFmODc0YjdlNzc1OGY0NmZjYzU=",
+    "useSass": true,
+    "clientPackageManager": "npm",
+    "clientFramework": "angularX",
+    "clientTheme": "none",
+    "clientThemeVariant": "",
+    "testFrameworks": [],
+    "jhiPrefix": "jhi",
+    "entitySuffix": "",
+    "dtoSuffix": "DTO",
+    "otherModules": [],
+    "enableTranslation": false
+  }
+}
