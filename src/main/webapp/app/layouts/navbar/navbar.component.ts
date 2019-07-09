@@ -5,7 +5,7 @@ import { NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
 import { VERSION } from 'app/app.constants';
 import { AccountService, LoginModalService, LoginService } from 'app/core';
 import { ProfileService } from 'app/layouts/profiles/profile.service';
-
+import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 @Component({
   selector: 'jhi-navbar',
   templateUrl: './navbar.component.html',
@@ -18,7 +18,7 @@ export class NavbarComponent implements OnInit {
   swaggerEnabled: boolean;
   modalRef: NgbModalRef;
   version: string;
-
+  faShoppingCart = faShoppingCart;
   constructor(
     private loginService: LoginService,
     private accountService: AccountService,

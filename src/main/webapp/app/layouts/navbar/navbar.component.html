@@ -1,11 +1,37 @@
-<nav class="navbar navbar-dark navbar-expand-md bg-dark">
+<nav class="navbar navbar-dark navbar-expand-md bg-dark header">
     <a class="navbar-brand logo" routerLink="/" (click)="collapseNavbar()">
         <span class="logo-img"></span>
-        <span class="navbar-title">EcommmerceFramework</span> <span class="navbar-version">{{version}}</span>
+        <span class="navbar-title">E Com - Framework</span> <span class="navbar-version">{{version}}</span>
     </a>
     <a class="navbar-toggler d-lg-none" href="javascript:void(0);" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation" (click)="toggleNavbar()">
         <fa-icon icon="bars"></fa-icon>
     </a>
+    <!-- BEGIN CART -->
+    <div class="top-cart-block">
+        <div class="top-cart-info">
+          <a href="javascript:void(0);" class="top-cart-info-count">3 items</a>
+          <a href="javascript:void(0);" class="top-cart-info-value">$1260</a>
+        </div>
+        <fa-icon [icon]="faShoppingCart"></fa-icon>
+        <div class="top-cart-content-wrapper">
+            <div class="top-cart-content">
+              <ul class="scroller" style="height: 250px;">
+                <li *ngFor="let shopItem of shopItmes;">
+                  <a [href]="shopItem.routelink"><img [src]="shopItem.imgSource" [alt]="shopItem.altText" width="37" height="34"></a>
+                  <span class="cart-content-count">{{shopItem.quantity}}</span>
+                  <strong><a [href]="shopItem.routelink">{{shopItem.altText}}</a></strong>
+                  <em>{{shopItem.amount}}</em>
+                  <a href="javascript:void(0);" class="del-goods">&nbsp;</a>
+                </li>
+              </ul>
+              <div class="text-right">
+                <a href="shop-shopping-cart.html" class="btn btn-default">View Cart</a>
+                <a href="shop-checkout.html" class="btn btn-primary">Checkout</a>
+              </div>
+            </div>
+          </div>            
+        </div>
+    </div>
     <div class="navbar-collapse collapse" id="navbarResponsive" [ngbCollapse]="isNavbarCollapsed" [ngSwitch]="isAuthenticated()">
         <ul class="navbar-nav ml-auto">
             <li class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
@@ -128,6 +154,22 @@
                     </li>
                 </ul>
             </li>
+            <!-- BEGIN TOP SEARCH -->
+            <li class="menu-search">
+                    <span class="sep"></span>
+                    <i class="fa fa-search search-btn"></i>
+                    <div class="search-box">
+                      <form action="#">
+                        <div class="input-group">
+                          <input type="text" placeholder="Search" class="form-control">
+                          <span class="input-group-btn">
+                            <button class="btn btn-primary" type="submit">Search</button>
+                          </span>
+                        </div>
+                      </form>
+                    </div> 
+                  </li>
+                  <!-- END TOP SEARCH -->
         </ul>
     </div>
 </nav>
