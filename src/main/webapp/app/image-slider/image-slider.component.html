@@ -1,0 +1,11 @@
+<ngb-carousel *ngIf="images">
+    <ng-template ngbSlide *ngFor="let image of images">
+      <img [src]="image.src" alt="image.alt" class="img-fluid">
+      <div class="carousel-caption" *ngIf="image.text1">
+        <h3 [ngClass]="{
+            'image.text1.cssClass': true
+        }">{{image.text1.label}}</h3>
+        <p>This carousel hides navigation arrows and indicators.</p>
+      </div>
+    </ng-template>
+  </ngb-carousel>

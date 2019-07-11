@@ -10,7 +10,22 @@
       "schematics": {
         "@schematics/angular:component": {
           "skipTests": true,
-          "style": "scss"
+          "styleExt": "scss",
+          "styles": [
+            "../../../node_modules/font-awesome/assets/scss/font-awesome.scss",
+            "../../../node_modules/angular-bootstrap-md/assets/scss/bootstrap/bootstrap.scss",
+            "../../../node_modules/angular-bootstrap-md/assets/scss/mdb-free.scss",
+            "../../..//node_modules/animate.css/animate.min.css"
+          ],
+          "scripts": [
+            "../../../node_modules/chart.js/dist/Chart.js",
+            "../../../node_modules/hammerjs/hammer.min.js",
+            "../../../node_modules/jquery/dist/jquery.min.js",
+            "../../../node_modules/popper.js/dist/umd/popper.min.js"
+          ]
+        },
+        "defaults": {
+          "styleExt": "scss"
         },
         "@schematics/angular:directive": {
           "skipTests": true

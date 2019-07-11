@@ -1,41 +1,30 @@
-<div class="row">
-    <div class="col-md-3">
-        <span class="hipster img-fluid rounded"></span>
-    </div>
-    <div class="col-md-9">
-        <h1 class="display-4">Welcome, Java Hipster!</h1>
-        <p class="lead">This is your homepage</p>
-
-        <div [ngSwitch]="isAuthenticated()">
-            <div class="alert alert-success" *ngSwitchCase="true">
-                <span id="home-logged-message" *ngIf="account"
-                   > You are logged in as user "{{account.login}}". </span>
-            </div>
-
-            <div class="alert alert-warning" *ngSwitchCase="false">
-                <span>If you want to </span>
-                <a class="alert-link" (click)="login()">sign in</a><span>, you can try the default accounts:<br/>- Administrator (login="admin" and password="admin") <br/>- User (login="user" and password="user").</span>
-            </div>
-            <div class="alert alert-warning" *ngSwitchCase="false">
-                <span>You don't have an account yet?</span>&nbsp;
-                <a class="alert-link" routerLink="register">Register a new account</a>
-            </div>
+<jhi-image-slider></jhi-image-slider>
+<div class="container">
+<div class="row justify-content-center">
+    <div class="col-md-12 sale-product">
+        <div *ngIf="images">
+            <h2>New Arrivals</h2>
+                <owl-carousel-o [options]="customOptions" #owlCar>
+                    <ng-container *ngFor="let image of images">
+                        <ng-template carouselSlide [id]="image.id" [width]="image.width">
+                            <div class="product-item">
+                                <div class="pi-img-wrapper">
+                                    <img [src]="image.src" class="img-fluid" alt="Berry Lace Dress">
+                                <div>
+                                <a class="btn btn-default fancybox-button" (click)="openDialog()">Zoom</a>
+                                <a href="#product-pop-up" class="btn btn-default fancybox-fast-view">View</a>
+                                </div>
+                                </div>
+                            <h3><a href="shop-item.html">{{image.name}}</a></h3>
+                            <div class="pi-price">{{image.price}}</div>
+                            <a href="javascript:;" class="btn btn-default add2cart">Add to cart</a>
+                            <div *ngIf="image.saleIcon === 'y'" class="sticker sticker-sale"></div>
+                            <div *ngIf="image.newIcon === 'y'" class="sticker sticker-new"></div>
+                            </div>
+                        </ng-template>
+                    </ng-container>
+                </owl-carousel-o>
         </div>
-
-        <p>
-            If you have any question on JHipster:
-        </p>
-
-        <ul>
-            <li><a href="https://www.jhipster.tech/" target="_blank" rel="noopener">JHipster homepage</a></li>
-            <li><a href="http://stackoverflow.com/tags/jhipster/info" target="_blank" rel="noopener">JHipster on Stack Overflow</a></li>
-            <li><a href="https://github.com/jhipster/generator-jhipster/issues?state=open" target="_blank" rel="noopener">JHipster bug tracker</a></li>
-            <li><a href="https://gitter.im/jhipster/generator-jhipster" target="_blank" rel="noopener">JHipster public chat room</a></li>
-            <li><a href="https://twitter.com/java_hipster" target="_blank" rel="noopener">follow @java_hipster on Twitter</a></li>
-        </ul>
-
-        <p>
-            <span>If you like JHipster, don't forget to give us a star on</span> <a href="https://github.com/jhipster/generator-jhipster" target="_blank" rel="noopener">GitHub</a>!
-        </p>
     </div>
+</div>
 </div>

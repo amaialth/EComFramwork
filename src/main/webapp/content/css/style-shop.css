@@ -362,10 +362,10 @@ Header and header elements
   height: 63px;
 }
 .sticker-sale {
-  background: url(../../pages/img/sale.png) no-repeat;
+  background: url(../images/ecom/sale.png) no-repeat;
 }
 .sticker-new {
-  background: url(../../pages/img/new.png) no-repeat;
+  background: url(../images/ecom/new.png) no-repeat;
   left: auto;
   right: 0;
 }
