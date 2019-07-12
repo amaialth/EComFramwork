@@ -1,4 +1,4 @@
-<nav class="navbar navbar-dark navbar-expand-md navbar-light bg-dark header">
+<nav class="navbar navbar-expand-md navbar-light bg-light header">
     <a class="navbar-brand logo" routerLink="/" (click)="collapseNavbar()">
         <span class="logo-img"></span>
         <span class="navbar-title">E Com - Framework</span> <span class="navbar-version">{{version}}</span>
@@ -32,6 +32,7 @@
           </div>            
         </div>
     </div>
+    <mat-icon [matBadge]="counterService.count" matBadgePosition="above after">favorite</mat-icon>
     <div class="navbar-collapse collapse" id="navbarResponsive" [ngbCollapse]="isNavbarCollapsed" [ngSwitch]="isAuthenticated()">
         <ul class="navbar-nav ml-auto">
             <li class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">

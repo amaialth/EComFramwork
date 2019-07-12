@@ -33,6 +33,8 @@
     "font-awesome": "^4.7.0",
     "hammerjs": "^2.0.8",
     "jquery": "^3.4.1",
+    "jquery-browserify": "^1.8.1",
+    "jquery-mousewheel": "^3.1.13",
     "material-design-icons": "^3.0.1",
     "mdbootstrap": "^4.8.5",
     "moment": "2.24.0",

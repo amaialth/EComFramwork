@@ -6,6 +6,7 @@ import { VERSION } from 'app/app.constants';
 import { AccountService, LoginModalService, LoginService } from 'app/core';
 import { ProfileService } from 'app/layouts/profiles/profile.service';
 import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
+import { CounterService } from '../../counter-service.service';
 @Component({
   selector: 'jhi-navbar',
   templateUrl: './navbar.component.html',
@@ -19,12 +20,14 @@ export class NavbarComponent implements OnInit {
   modalRef: NgbModalRef;
   version: string;
   faShoppingCart = faShoppingCart;
+  count = 0;
   constructor(
     private loginService: LoginService,
     private accountService: AccountService,
     private loginModalService: LoginModalService,
     private profileService: ProfileService,
-    private router: Router
+    private router: Router,
+    private counterService: CounterService
   ) {
     this.version = VERSION ? 'v' + VERSION : '';
     this.isNavbarCollapsed = true;

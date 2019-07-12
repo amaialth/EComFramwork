@@ -1,0 +1,33 @@
+<div class="container-fluid">
+    <div class="row justify-content-center">
+        <div class="col-md-12 sale-product">
+            <div *ngIf="images">
+                <h2>New Arrivals</h2>
+                    <owl-carousel-o [options]="customOptions" #owlCar>
+                        <ng-container *ngFor="let image of images">
+                            <ng-template carouselSlide [id]="image.id" [width]="image.width">
+                                <div class="product-item">
+                                    <div class="pi-img-wrapper">
+                                        <img [src]="image.src" class="img-fluid" alt="Berry Lace Dress">
+                                    <div>
+                                    <a class="btn btn-default fancybox-button" (click)="openDialog()">Zoom</a>
+                                    <a href="#product-pop-up" class="btn btn-default fancybox-fast-view">View</a>
+                                    </div>
+                                    </div>
+                                <h3><a href="shop-item.html">{{image.name}}</a></h3>
+                                <div class="pi-price">{{image.price}}</div>
+                                <a class="text-danger" matTooltip="Add to your wishlist">
+                                    <mat-icon (click)="addToWishlist()">favorite</mat-icon>
+                                </a>
+                                <a href="javascript:;" class="btn btn-default add2cart">Add to cart</a>
+                                <div *ngIf="image.saleIcon === 'y'" class="sticker sticker-sale"></div>
+                                <div *ngIf="image.newIcon === 'y'" class="sticker sticker-new"></div>
+                                </div>
+                                <!-- Controls -->
+                            </ng-template>
+                        </ng-container>
+                    </owl-carousel-o>
+                </div>
+        </div>
+    </div>
+    </div>
