@@ -17,4 +17,7 @@ export class CommonUtilService {
   public getProducts(): Observable<any> {
     return this.http.get('../content/json/product-carousel.json');
   }
+  public getProducts2(): Observable<any> {
+    return this.http.get('../content/json/product-carousel2.json');
+  }
 }

@@ -12,7 +12,7 @@ export class ProductCarouselComponent implements OnInit {
   width = 300;
   customOptions: OwlOptions = {
     loop: true,
-    center: false,
+    center: true,
     items: 5,
     slideBy: 3,
     mouseDrag: false,
@@ -29,7 +29,7 @@ export class ProductCarouselComponent implements OnInit {
         slideBy: 1
       },
       400: {
-        items: 1,
+        items: 2,
         slideBy: 1
       },
       740: {

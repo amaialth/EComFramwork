@@ -9,7 +9,7 @@ export class ProductCarouselAllComponent implements OnInit {
   @Input() products: any;
   customOptions: OwlOptions = {
     loop: true,
-    center: false,
+    center: true,
     items: 5,
     slideBy: 3,
     mouseDrag: false,
@@ -26,7 +26,7 @@ export class ProductCarouselAllComponent implements OnInit {
         slideBy: 1
       },
       400: {
-        items: 1,
+        items: 2,
         slideBy: 1
       },
       740: {

@@ -1,0 +1,51 @@
+[
+  {
+    "name": "Phillipa Iron box",
+    "img": "../../content/images/ecom/product-carousel/second/1.jpg",
+    "rating": "456",
+    "price": "1,599",
+    "oldprice": "2,599"
+  },
+  {
+    "name": "DCH Mixer Grinder",
+    "img": "../../content/images/ecom/product-carousel/second/2.jpg",
+    "rating": "23",
+    "price": "3,099",
+    "oldprice": "4,599"
+  },
+  {
+    "name": "Denim Handbag",
+    "img": "../../content/images/ecom/product-carousel/second/3.jpg",
+    "rating": "342",
+    "price": "599",
+    "oldprice": "1,599"
+  },
+  {
+    "name": "Appo U1",
+    "img": "../../content/images/ecom/product-carousel/second/4.jpg",
+    "rating": "5678",
+    "price": "8,999",
+    "oldprice": "14,599"
+  },
+  {
+    "name": "Flex Sofa",
+    "img": "../../content/images/ecom/product-carousel/second/5.jpg",
+    "rating": "89",
+    "price": "11,599",
+    "oldprice": "22,599"
+  },
+  {
+    "name": "Cushan Sofa Chair",
+    "img": "../../content/images/ecom/product-carousel/second/6.jpg",
+    "rating": "56",
+    "price": "4,599",
+    "oldprice": "8,999"
+  },
+  {
+    "name": "PQ Smart Watch",
+    "img": "../../content/images/ecom/product-carousel/second/7.jpg",
+    "rating": "678",
+    "price": "9,999",
+    "oldprice": "12,999"
+  }
+]

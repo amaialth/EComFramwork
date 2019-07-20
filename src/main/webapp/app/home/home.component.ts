@@ -14,6 +14,7 @@ export class HomeComponent implements OnInit {
   deals: any = [];
   deals2: any = [];
   products: any = [];
+  products2: any = [];
   images = [
     {
       src: '../../content/images/ecom/shop-slider/slide1/shoe_wall.jpg',
@@ -45,12 +46,7 @@ export class HomeComponent implements OnInit {
     private loginModalService: LoginModalService,
     private eventManager: JhiEventManager,
     private commonUtilService: CommonUtilService
-  ) {
-    this.commonUtilService.getProducts().subscribe(data => {
-      this.products = data;
-      console.log(this.products);
-    });
-  }
+  ) {}
 
   ngOnInit() {
     this.accountService.identity().then((account: Account) => {
@@ -62,6 +58,12 @@ export class HomeComponent implements OnInit {
     });
     this.commonUtilService.getDeals2().subscribe(data => {
       this.deals2 = data;
+    });
+    this.commonUtilService.getProducts().subscribe(data => {
+      this.products = data;
+    });
+    this.commonUtilService.getProducts2().subscribe(data => {
+      this.products2 = data;
     });
   }
 
