@@ -7,12 +7,18 @@ import { AccountService, LoginModalService, LoginService } from 'app/core';
 import { ProfileService } from 'app/layouts/profiles/profile.service';
 import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 import { CounterService } from '../../counter-service.service';
+import { map } from 'rxjs/operators';
 @Component({
   selector: 'jhi-navbar',
-  templateUrl: './navbar.component.html',
+  templateUrl: './searchnavbar.html',
   styleUrls: ['navbar.scss']
 })
 export class NavbarComponent implements OnInit {
+  categoryMap = new Map<string, string[]>([
+    ['Women', ['Clothings', 'Shoes', 'sub 3']],
+    ['Men', ['Men Category']],
+    ['Kids', ['Kids Category']]
+  ]);
   inProduction: boolean;
   isNavbarCollapsed: boolean;
   languages: any[];
@@ -32,7 +38,6 @@ export class NavbarComponent implements OnInit {
     this.version = VERSION ? 'v' + VERSION : '';
     this.isNavbarCollapsed = true;
   }
-
   ngOnInit() {
     this.profileService.getProfileInfo().then(profileInfo => {
       this.inProduction = profileInfo.inProduction;
@@ -45,7 +50,8 @@ export class NavbarComponent implements OnInit {
   }
 
   isAuthenticated() {
-    return this.accountService.isAuthenticated();
+    // return this.accountService.isAuthenticated();
+    return true;
   }
 
   login() {
@@ -62,7 +68,12 @@ export class NavbarComponent implements OnInit {
     this.isNavbarCollapsed = !this.isNavbarCollapsed;
   }
 
+  getSuubCatergory(category: string) {
+    return this.categoryMap.get(category);
+  }
+
   getImageUrl() {
-    return this.isAuthenticated() ? this.accountService.getImageUrl() : null;
+    // return this.isAuthenticated() ? this.accountService.getImageUrl() : null;
+    return false;
   }
 }

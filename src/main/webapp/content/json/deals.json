@@ -1,0 +1,50 @@
+[
+  {
+    "title": "Formals Under 499 | Free delivery",
+    "img": "../../content/images/ecom/card/formals.jpg",
+    "description": "Deals under 499/-",
+    "linkDesc": "Shop Now"
+  },
+  {
+    "title": "Jewellery - Trending Collections",
+    "img": "../../content/images/ecom/card/jwel.jpg",
+    "description": "Trending collections in Jewellery.",
+    "linkDesc": "Explore now"
+  },
+  {
+    "title": "Headphones - Best Brands",
+    "img": "../../content/images/ecom/products/p6.jpg",
+    "description": "Best Brands, lowest price.",
+    "linkDesc": "See more"
+  },
+  {
+    "title": "Mobiles - Exchange Offer",
+    "img": "../../content/images/ecom/card/mobile_card.jpg",
+    "description": "Great exchange offer on all brands",
+    "linkDesc": "Shop Now"
+  },
+  {
+    "title": "Cameras | Just Launched",
+    "img": "../../content/images/ecom/products/p7.jpg",
+    "description": "Cameras of new collection.",
+    "linkDesc": "Shop Now"
+  },
+  {
+    "title": "Bussiness Fashion",
+    "img": "../../content/images/ecom/card/mens-business-fashion.jpg",
+    "description": "Bussiness formals from best brands.",
+    "linkDesc": "See more"
+  },
+  {
+    "title": "T-Shirts Under 399",
+    "img": "../../content/images/ecom/card/tshirts.jpg",
+    "description": "Greads deals under 399",
+    "linkDesc": "Shop Now"
+  },
+  {
+    "title": "Bags | 50% Offer",
+    "img": "../../content/images/ecom/card/bag_black.jpg",
+    "description": "Bags at lowest price and 50% off.",
+    "linkDesc": "See all"
+  }
+]

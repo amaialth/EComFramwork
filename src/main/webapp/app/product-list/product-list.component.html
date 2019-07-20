@@ -2,19 +2,13 @@
     <div class="row justify-content-center">
         <div class="col-md-12 sale-product">
             <div *ngIf="images">
-                <div style="width: 75%; height: 50%;">
-                <div class="top-title">New Arrivals</div>
-                </div>
+                <div class="top-title">Hot Deals</div>
                     <owl-carousel-o [options]="customOptions" #owlCar>
                         <ng-container *ngFor="let image of images">
                             <ng-template carouselSlide [id]="image.id" [width]="image.width">
                                 <div class="product-item">
                                     <div class="pi-img-wrapper">
                                         <img [src]="image.src" class="img-fluid" alt="Berry Lace Dress">
-                                    <div>
-                                    <a class="btn btn-default fancybox-button" (click)="openDialog()">Zoom</a>
-                                    <a href="#product-pop-up" class="btn btn-default fancybox-fast-view">View</a>
-                                    </div>
                                     </div>
                                 <h3><a href="shop-item.html">{{image.name}}</a></h3>
                                 <div class="pi-price">{{image.price}}</div>
@@ -32,4 +26,4 @@
                 </div>
         </div>
     </div>
-</div>
+    </div>

@@ -1,26 +1,16 @@
 @import 'bootstrap-variables';
 @import '~bootstrap/scss/functions';
 @import '~bootstrap/scss/variables';
-
+@import '~rfs/scss';
 /* ==============================================================
 Bootstrap tweaks
 ===============================================================*/
-
-body,
-h1,
-h2,
-h3,
-h4 {
-  font-weight: 300;
-}
-
 a {
-  color: #533f03;
   font-weight: bold;
 }
 
 a:hover {
-  color: #533f03;
+  color: #0836cb;
   font-weight: bold;
   /* make sure browsers use the pointer cursor for anchors, even with no href */
   cursor: pointer;
@@ -180,3 +170,114 @@ ui bootstrap tweaks
 }
 
 /* jhipster-needle-scss-add-main JHipster will add new css style */
+@mixin for-phone-only {
+  @media (max-width: 599px) {
+    @content;
+  }
+}
+@mixin for-tablet-portrait-up {
+  @media (min-width: 600px) {
+    @content;
+  }
+}
+@mixin for-tablet-landscape-up {
+  @media (min-width: 900px) {
+    @content;
+  }
+}
+@mixin for-desktop-up {
+  @media (min-width: 1200px) {
+    @content;
+  }
+}
+@mixin for-big-desktop-up {
+  @media (min-width: 1800px) {
+    @content;
+  }
+}
+
+.top-title,
+.card-title {
+  font-size: 1.5rem;
+
+  @include for-phone-only {
+    font-size: 0.5rem;
+  }
+  @include for-tablet-portrait-up {
+    font-size: 1rem;
+  }
+  @include for-tablet-landscape-up {
+    font-size: 1.5rem;
+  }
+  @include for-desktop-up {
+    font-size: 1.5rem;
+  }
+  @include for-big-desktop-up {
+    font-size: 1.5rem;
+  }
+}
+
+.card-text {
+  font-size: 1rem;
+
+  @include for-phone-only {
+    font-size: 0.25rem;
+  }
+  @include for-tablet-portrait-up {
+    font-size: 0.75rem;
+  }
+  @include for-tablet-landscape-up {
+    font-size: 1rem;
+  }
+  @include for-desktop-up {
+    font-size: 1rem;
+  }
+  @include for-big-desktop-up {
+    font-size: 1.5rem;
+  }
+}
+
+.truncate-1line,
+.truncate-2line {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -ms-text-overflow: ellipsis;
+}
+.truncate-1line {
+  white-space: nowrap;
+}
+.pad-overide {
+  padding-left: 10px !important;
+  padding-right: 10px !important;
+}
+.deals-card {
+  top: 200px;
+}
+.owl-prev,
+.owl-next {
+  position: absolute;
+  height: 100px;
+  color: transperent;
+  background: none !important;
+  border: none;
+  z-index: 100;
+  position: absolute;
+  top: 25%;
+}
+.owl-prev i,
+.owl-next i {
+  font-size: 2.5rem;
+}
+.owl-prev i:hover,
+.owl-next i:hover {
+  background-color: transparent;
+}
+
+.owl-prev {
+  left: 0;
+}
+
+.owl-next {
+  right: 0;
+}

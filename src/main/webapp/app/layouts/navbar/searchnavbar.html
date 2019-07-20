@@ -1,0 +1,31 @@
+<nav class="navbar navbar-expand-md navbar-light bg-light header fixed-top">
+    <a class="navbar-toggler d-lg-none" href="javascript:void(0);" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation" (click)="toggleNavbar()">
+                <fa-icon icon="bars"></fa-icon>
+    </a>
+    <a class="navbar-brand logo" routerLink="/" (click)="collapseNavbar()">
+            <span class="logo-img"></span>
+            <span class="navbar-title-primary font-effect-shadow-multiple">E Com - Framework</span>
+    </a>
+    <div class="collapse navbar-collapse" id="navbarResponsive" [ngbCollapse]="isNavbarCollapsed">
+    <ul class="navbar-nav mx-auto">
+    <li class="nav-item">
+        <div class="input-group form-inline">
+            <input type="text" class="form-control" placeholder="Search">
+            <div class="input-group-append">
+              <button class="btn btn-primary" type="button">
+                <i class="fa fa-search"></i>
+              </button>
+            </div>
+          </div>
+        </li>
+    </ul>
+    <ul class="navbar-nav ml-auto">
+   <li class="nav-item">
+    <a class="nav-link" href="#"><i class="fa fa-user-circle"></i> My Account</a>
+</li>
+<li class="nav-item">
+    <a class="nav-link" href="#"><i class="fa fa-shopping-cart"></i> Cart</a>
+</li>
+    </ul>
+</div>
+</nav>

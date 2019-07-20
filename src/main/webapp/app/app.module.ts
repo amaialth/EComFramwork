@@ -19,11 +19,12 @@ import { EcommmerceFrameworkHomeModule } from './home/home.module';
 import { EcommmerceFrameworkAccountModule } from './account/account.module';
 import { EcommmerceFrameworkEntityModule } from './entities/entity.module';
 import * as moment from 'moment';
-import { MDBBootstrapModule } from 'angular-bootstrap-md';
+
 import { NgxImageZoomModule } from 'ngx-image-zoom';
 // jhipster-needle-angular-add-module-import JHipster will add new module here
 import { JhiMainComponent, NavbarComponent, FooterComponent, PageRibbonComponent, ErrorComponent } from './layouts';
 import { ProductDetailModelComponent } from './product-detail-model/product-detail-model.component';
+
 @NgModule({
   imports: [
     BrowserModule,
@@ -41,7 +42,6 @@ import { ProductDetailModelComponent } from './product-detail-model/product-deta
     // jhipster-needle-angular-add-module JHipster will add new module here
     EcommmerceFrameworkEntityModule,
     EcommmerceFrameworkAppRoutingModule,
-    MDBBootstrapModule.forRoot(),
     NgxImageZoomModule.forRoot()
   ],
   schemas: [NO_ERRORS_SCHEMA],

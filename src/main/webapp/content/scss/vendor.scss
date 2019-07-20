@@ -14,10 +14,8 @@ eg $input-color: red;
 // Import Bootstrap source files from node_modules
 @import '~bootstrap/scss/bootstrap';
 @import '~font-awesome/scss/font-awesome';
-@import '~angular-bootstrap-md/assets/scss/bootstrap/bootstrap';
-@import '~angular-bootstrap-md/assets/scss/mdb';
 @import '~rfs/scss';
 @import '~ngx-owl-carousel-o/lib/styles/scss/owl.carousel';
 @import '~ngx-owl-carousel-o/lib/styles/scss/owl.theme.default';
-@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+@import '~animate.css/animate.css';
 /* jhipster-needle-scss-add-vendor JHipster will add new css style */
