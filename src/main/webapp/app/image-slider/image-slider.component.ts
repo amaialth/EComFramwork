@@ -26,4 +26,7 @@ export class ImageSliderComponent implements OnInit {
   ngOnInit() {
     this.carousel.pause();
   }
+  goPre() {
+    this.carousel.prev();
+  }
 }
