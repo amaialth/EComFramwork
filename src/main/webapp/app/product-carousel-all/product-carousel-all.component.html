@@ -1,0 +1,18 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12">
+            <div *ngIf="products">
+                <div class="top-title">New Arraivals </div>
+                    <owl-carousel-o [options]="customOptions" #owlCar>
+                        <ng-container *ngFor="let product of products">
+                            <ng-template carouselSlide class="thumbnail">
+                                <!--Carousel Product Card -->
+                                <jhi-carosel-product-card-all [product]="product"></jhi-carosel-product-card-all>
+                                 <!--Carousel Product Card -->
+                            </ng-template>
+                        </ng-container>
+                    </owl-carousel-o>
+                </div>
+        </div>
+    </div>
+</div>

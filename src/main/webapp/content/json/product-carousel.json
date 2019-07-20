@@ -1,0 +1,56 @@
+[
+  {
+    "name": "Nike Mens - Running shoe",
+    "img": "../../content/images/ecom/product-carousel/nike-shoe.jpg",
+    "rating": "456",
+    "price": "4,999"
+  },
+  {
+    "name": "QBL 500D",
+    "img": "../../content/images/ecom/product-carousel/headphone.jpg",
+    "rating": "298",
+    "price": "2,500"
+  },
+  {
+    "name": "TITIAN m737 Time is yours",
+    "img": "../../content/images/ecom/product-carousel/watch.jpg",
+    "rating": "129",
+    "price": "1,499"
+  },
+  {
+    "name": "Raymondy T-Shirt-Blue for Women ",
+    "img": "../../content/images/ecom/product-carousel/women-tshirt.jpg",
+    "rating": "567",
+    "price": "999"
+  },
+  {
+    "name": "Macbook 5",
+    "img": "../../content/images/ecom/product-carousel/macbook.jpg",
+    "rating": "234",
+    "price": "12,890"
+  },
+  {
+    "name": "SanDusk pendrive 43 GB",
+    "img": "../../content/images/ecom/product-carousel/usb.jpg",
+    "rating": "469",
+    "price": "666"
+  },
+  {
+    "name": "Denim Tshirt from KK",
+    "img": "../../content/images/ecom/product-carousel/white-tshirt.jpg",
+    "rating": "34",
+    "price": "599"
+  },
+  {
+    "name": "Dill 549 Bluetooth Mouse",
+    "img": "../../content/images/ecom/product-carousel/white_mouse.jpg",
+    "rating": "678",
+    "price": "1,500"
+  },
+  {
+    "name": "KK Women Handbag combo",
+    "img": "../../content/images/ecom/product-carousel/women-handbag.jpg",
+    "rating": "989",
+    "price": "2,499"
+  }
+]

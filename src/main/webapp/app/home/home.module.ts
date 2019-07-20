@@ -13,6 +13,8 @@ import { CarouselProductCardComponent } from '../carousel-product-card/carousel-
 import { DealsCardComponent } from '../deals-card/deals-card.component';
 import { DealsComponent } from '../deals/deals.component';
 import { ProductCarouselComponent } from '../product-carousel/product-carousel.component';
+import { CaroselProductCardAllComponent } from '../carosel-product-card-all/carosel-product-card-all.component';
+import { ProductCarouselAllComponent } from '../product-carousel-all/product-carousel-all.component';
 @NgModule({
   imports: [EcommmerceFrameworkSharedModule, RouterModule.forChild([HOME_ROUTE]), CarouselModule],
   declarations: [
@@ -25,7 +27,9 @@ import { ProductCarouselComponent } from '../product-carousel/product-carousel.c
     CarouselProductCardComponent,
     DealsCardComponent,
     DealsComponent,
-    ProductCarouselComponent
+    ProductCarouselComponent,
+    CaroselProductCardAllComponent,
+    ProductCarouselAllComponent
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })

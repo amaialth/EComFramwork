@@ -12,6 +12,8 @@ export class HomeComponent implements OnInit {
   account: Account;
   modalRef: NgbModalRef;
   deals: any = [];
+  deals2: any = [];
+  products: any = [];
   images = [
     {
       src: '../../content/images/ecom/shop-slider/slide1/shoe_wall.jpg',
@@ -43,7 +45,12 @@ export class HomeComponent implements OnInit {
     private loginModalService: LoginModalService,
     private eventManager: JhiEventManager,
     private commonUtilService: CommonUtilService
-  ) {}
+  ) {
+    this.commonUtilService.getProducts().subscribe(data => {
+      this.products = data;
+      console.log(this.products);
+    });
+  }
 
   ngOnInit() {
     this.accountService.identity().then((account: Account) => {
@@ -52,7 +59,9 @@ export class HomeComponent implements OnInit {
     this.registerAuthenticationSuccess();
     this.commonUtilService.getDeals().subscribe(data => {
       this.deals = data;
-      console.log(this.deals);
+    });
+    this.commonUtilService.getDeals2().subscribe(data => {
+      this.deals2 = data;
     });
   }
 

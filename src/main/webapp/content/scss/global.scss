@@ -263,15 +263,15 @@ ui bootstrap tweaks
   border: none;
   z-index: 100;
   position: absolute;
-  top: 25%;
 }
 .owl-prev i,
 .owl-next i {
   font-size: 2.5rem;
+  color: blue;
 }
 .owl-prev i:hover,
 .owl-next i:hover {
-  background-color: transparent;
+  background-color: white;
 }
 
 .owl-prev {

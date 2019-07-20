@@ -6,7 +6,7 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./deals-card.component.scss']
 })
 export class DealsCardComponent implements OnInit {
-  @Input() deal: Deal;
+  @Input() deal: any;
   constructor() {}
 
   ngOnInit() {}

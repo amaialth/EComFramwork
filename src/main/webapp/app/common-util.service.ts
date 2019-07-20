@@ -11,4 +11,10 @@ export class CommonUtilService {
   public getDeals(): Observable<any> {
     return this.http.get('../content/json/deals.json');
   }
+  public getDeals2(): Observable<any> {
+    return this.http.get('../content/json/deals2.json');
+  }
+  public getProducts(): Observable<any> {
+    return this.http.get('../content/json/product-carousel.json');
+  }
 }

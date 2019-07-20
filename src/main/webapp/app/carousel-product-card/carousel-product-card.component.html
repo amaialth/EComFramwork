@@ -1,19 +1,47 @@
-<!--Product Card STARTS-->
+<!--Product Card STARTS
 <div class="card p-2 rounded-0 mt-2 mb-2">
-  <img src="C:\Users\Anbumani\git\EComFramwork\src\main\webapp\content\images\ecom\products\p7.jpg" class="card-img-top rounded-0" alt="...">
+  <a><img [src]="product.img" class="card-img-top rounded-0" alt="..."></a>
    <div class="card-body">
-   <a href="#">Solimo JiffyTransfer 32GB USB 3.0 Pendrive</a>
+   <a href="#">{{product.name}}</a>
      <div>
             <span><i class="text-warning fa fa-star"></i></span>
                  <span><i class="text-warning fa fa-star"></i></span>
                <span><i class="text-warning fa fa-star"></i></span>
                <span><i class="text-warning fa fa-star"></i></span>
      <span><i class="text-warning fa fa-star"></i></span>
-     <span class="text-sm"> 23</span>
+     <span class="text-sm"> {{product.rating}}</span>
    </div>
    <div class="text-orange">
-     <span> <i class="fa fa-inr" aria-hidden="true"></i> 599</span>
+     <span> <i class="fa fa-inr" aria-hidden="true"></i> {{product.price}}</span>
    </div>
     </div>
 </div>
-<!--Product Card ENDS-->
+Product Card ENDS-->
+
+<div class="item-slide p-2">
+  <figure class="card card-product">
+    <div class="img-wrap"> <img [src]=product.img> </div>
+    <figcaption class="info-wrap text-center">
+        <span class="badge-new"> NEW </span>
+      <h6 class="title text-truncate"><a href="#">{{product.name}}</a></h6>
+      <div class="rating-wrap">
+        <ul class="rating-stars">
+          <li style="width:70%" class="stars-active"> 
+            <i class="fa fa-star"></i> <i class="fa fa-star"></i> 
+            <i class="fa fa-star"></i> <i class="fa fa-star"></i> 
+            <i class="fa fa-star"></i> 
+          </li>
+          <li>
+            <i class="fa fa-star"></i> <i class="fa fa-star"></i> 
+            <i class="fa fa-star"></i> <i class="fa fa-star"></i> 
+            <i class="fa fa-star"></i> 
+          </li>
+        </ul>
+        <div class="label-rating">{{product.rating}} reviews</div>
+      </div> <!-- rating-wrap.// -->
+      <div class="text-orange">
+        <span> <i class="fa fa-inr" aria-hidden="true"></i> {{product.price}}</span>
+      </div>
+    </figcaption>
+  </figure> <!-- card // -->
+</div>

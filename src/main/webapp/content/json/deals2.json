@@ -1,0 +1,26 @@
+[
+  {
+    "title": "Upto 30% off | Make-up",
+    "img": "../../content/images/ecom/card/mackup.jpg",
+    "description": "All make-up essentials.",
+    "linkDesc": "Explore All"
+  },
+  {
+    "title": "Home Decorators",
+    "img": "../../content/images/ecom/card/home-decor.jpg",
+    "description": "Home Decors & more.",
+    "linkDesc": "See all"
+  },
+  {
+    "title": "Smart TV - Best Brands",
+    "img": "../../content/images/ecom/card/tv_mobile.jpg",
+    "description": "Get smart at its best price.",
+    "linkDesc": "See more"
+  },
+  {
+    "title": "Furniture up to 60% off",
+    "img": "../../content/images/ecom/card/funiture.jpg",
+    "description": "Chairs, beds, bean bag covers & more from Amazon Brands & more.",
+    "linkDesc": "Shop Now"
+  }
+]

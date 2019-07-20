@@ -1,16 +1,14 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-12">
-            <div *ngIf="images">
-                <div class="top-title">Trending</div>
+            <div *ngIf="products">
+                <div class="top-title">Trending </div>
                     <owl-carousel-o [options]="customOptions" #owlCar>
-                        <ng-container *ngFor="let image of images">
-                            <ng-template carouselSlide [id]="image.id" [width]="image.width">
-                                 <!-- Carousel Product Card -->
-                                
-                                 <jhi-carousel-product-card [product]="image"></jhi-carousel-product-card>
-
-                                <!-- Carousel Product Card -->
+                        <ng-container *ngFor="let product of products">
+                            <ng-template carouselSlide class="thumbnail">
+                                <!--Carousel Product Card -->
+                                <jhi-carousel-product-card [product]="product"></jhi-carousel-product-card>
+                                 <!--Carousel Product Card -->
                             </ng-template>
                         </ng-container>
                     </owl-carousel-o>
