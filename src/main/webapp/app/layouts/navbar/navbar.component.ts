@@ -8,17 +8,18 @@ import { ProfileService } from 'app/layouts/profiles/profile.service';
 import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 import { CounterService } from '../../counter-service.service';
 import { map } from 'rxjs/operators';
+import { EcomModelService } from 'app/ecom-model-service.service';
+import { ProductCategory } from 'app/shared/model/product-category.model';
+import { CommonUtilService } from 'app/common-util.service';
+import { EcomModel } from 'app/model/EcomModel.model';
 @Component({
   selector: 'jhi-navbar',
   templateUrl: './searchnavbar.html',
   styleUrls: ['navbar.scss']
 })
 export class NavbarComponent implements OnInit {
-  categoryMap = new Map<string, string[]>([
-    ['Women', ['Clothings', 'Shoes', 'sub 3']],
-    ['Men', ['Men Category']],
-    ['Kids', ['Kids Category']]
-  ]);
+  ecomModel: EcomModel;
+  categories: ProductCategory[];
   inProduction: boolean;
   isNavbarCollapsed: boolean;
   languages: any[];
@@ -33,16 +34,30 @@ export class NavbarComponent implements OnInit {
     private loginModalService: LoginModalService,
     private profileService: ProfileService,
     private router: Router,
-    private counterService: CounterService
+    private counterService: CounterService,
+    private ecomModelService: EcomModelService,
+    private commonUtilService: CommonUtilService
   ) {
     this.version = VERSION ? 'v' + VERSION : '';
     this.isNavbarCollapsed = true;
   }
   ngOnInit() {
+    if (this.ecomModelService.ecomModel) {
+      this.ecomModel = this.ecomModelService.ecomModel;
+    } else {
+      this.ecomModel = new EcomModel();
+    }
     this.profileService.getProfileInfo().then(profileInfo => {
       this.inProduction = profileInfo.inProduction;
       this.swaggerEnabled = profileInfo.swaggerEnabled;
     });
+    if (!this.categories) {
+      this.commonUtilService.getProductCategory().subscribe(data => {
+        this.categories = data as ProductCategory[];
+        this.ecomModel.categories = this.categories;
+        this.ecomModelService.ecomModel = this.ecomModel;
+      });
+    }
   }
 
   collapseNavbar() {
@@ -66,10 +81,6 @@ export class NavbarComponent implements OnInit {
 
   toggleNavbar() {
     this.isNavbarCollapsed = !this.isNavbarCollapsed;
-  }
-
-  getSuubCatergory(category: string) {
-    return this.categoryMap.get(category);
   }
 
   getImageUrl() {

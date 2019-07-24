@@ -15,8 +15,12 @@ import { DealsComponent } from '../deals/deals.component';
 import { ProductCarouselComponent } from '../product-carousel/product-carousel.component';
 import { CarouselProductCardAllComponent } from '../carosel-product-card-all/carosel-product-card-all.component';
 import { ProductCarouselAllComponent } from '../product-carousel-all/product-carousel-all.component';
+import { ProductListPageComponent } from '../product-list-page/product-list-page.component';
+import { BrandFilterComponent } from '../brand-filter/brand-filter.component';
+import { PriceFilterComponent } from '../price-filter/price-filter.component';
+import { CustomerReviewFilterComponent } from '../customer-review-filter/customer-review-filter.component';
 @NgModule({
-  imports: [EcommmerceFrameworkSharedModule, RouterModule.forChild([HOME_ROUTE]), CarouselModule],
+  imports: [EcommmerceFrameworkSharedModule, RouterModule.forRoot(HOME_ROUTE), CarouselModule],
   declarations: [
     HomeComponent,
     ImageSliderComponent,
@@ -29,7 +33,11 @@ import { ProductCarouselAllComponent } from '../product-carousel-all/product-car
     DealsComponent,
     ProductCarouselComponent,
     CarouselProductCardAllComponent,
-    ProductCarouselAllComponent
+    ProductCarouselAllComponent,
+    ProductListPageComponent,
+    BrandFilterComponent,
+    PriceFilterComponent,
+    CustomerReviewFilterComponent
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })

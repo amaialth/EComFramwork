@@ -3,6 +3,10 @@ import { NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
 import { JhiEventManager } from 'ng-jhipster';
 import { LoginModalService, AccountService, Account } from 'app/core';
 import { CommonUtilService } from '../common-util.service';
+import { EcomModelService } from 'app/ecom-model-service.service';
+import { ProductCategory } from 'app/shared/model/product-category.model';
+import { EcomModel } from 'app/model/EcomModel.model';
+
 @Component({
   selector: 'jhi-home',
   templateUrl: './home.component.html',
@@ -15,6 +19,7 @@ export class HomeComponent implements OnInit {
   deals2: any = [];
   products: any = [];
   products2: any = [];
+  ecomModel: EcomModel;
   images = [
     {
       src: '../../content/images/ecom/shop-slider/slide1/shoe_wall.jpg',
@@ -45,10 +50,16 @@ export class HomeComponent implements OnInit {
     private accountService: AccountService,
     private loginModalService: LoginModalService,
     private eventManager: JhiEventManager,
-    private commonUtilService: CommonUtilService
+    private commonUtilService: CommonUtilService,
+    private emcomModelService: EcomModelService
   ) {}
 
   ngOnInit() {
+    if (this.emcomModelService.ecomModel) {
+      this.ecomModel = this.emcomModelService.ecomModel;
+    } else {
+      this.ecomModel = new EcomModel();
+    }
     this.accountService.identity().then((account: Account) => {
       this.account = account;
     });
@@ -65,6 +76,13 @@ export class HomeComponent implements OnInit {
     this.commonUtilService.getProducts2().subscribe(data => {
       this.products2 = data;
     });
+    if (!this.ecomModel.categories) {
+      this.ecomModel.categories = [];
+      this.commonUtilService.getProductCategory().subscribe(data => {
+        this.ecomModel.categories = data as ProductCategory[];
+      });
+      this.emcomModelService.ecomModel = this.ecomModel;
+    }
   }
 
   registerAuthenticationSuccess() {

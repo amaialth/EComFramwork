@@ -1,0 +1,45 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="productSubCategory">
+            <h2><span>Product Sub Category</span> {{productSubCategory.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span>Sub Category Id</span></dt>
+                <dd>
+                    <span>{{productSubCategory.sub_category_id}}</span>
+                </dd>
+                <dt><span>Category Id</span></dt>
+                <dd>
+                    <span>{{productSubCategory.category_id}}</span>
+                </dd>
+                <dt><span>Sub Category</span></dt>
+                <dd>
+                    <span>{{productSubCategory.sub_category}}</span>
+                </dd>
+                <dt><span>Active</span></dt>
+                <dd>
+                    <span>{{productSubCategory.active}}</span>
+                </dd>
+                <dt><span>Product Category</span></dt>
+                <dd>
+                    <div *ngIf="productSubCategory.product_categoryId">
+                        <a [routerLink]="['/product-category', productSubCategory.product_categoryId, 'view']">{{productSubCategory.product_categoryProduct_category}}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/product-sub-category', productSubCategory.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>
