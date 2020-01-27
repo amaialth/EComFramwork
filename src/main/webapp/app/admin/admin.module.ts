@@ -17,6 +17,7 @@ import {
   JhiConfigurationComponent,
   JhiDocsComponent
 } from './';
+import { AdminHomeComponent } from './admin-home/admin-home.component';
 
 @NgModule({
   imports: [
@@ -35,7 +36,8 @@ import {
     JhiHealthCheckComponent,
     JhiHealthModalComponent,
     JhiDocsComponent,
-    JhiMetricsMonitoringComponent
+    JhiMetricsMonitoringComponent,
+    AdminHomeComponent
   ],
   entryComponents: [UserMgmtDeleteDialogComponent, JhiHealthModalComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]

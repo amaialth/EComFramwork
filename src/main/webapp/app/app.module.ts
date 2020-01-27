@@ -24,6 +24,9 @@ import { NgxImageZoomModule } from 'ngx-image-zoom';
 // jhipster-needle-angular-add-module-import JHipster will add new module here
 import { JhiMainComponent, NavbarComponent, FooterComponent, PageRibbonComponent, ErrorComponent } from './layouts';
 import { ProductDetailModelComponent } from './product-detail-model/product-detail-model.component';
+import { NgxPaginationModule } from 'ngx-pagination';
+import { BarRatingModule } from 'ngx-bar-rating';
+import { SlickCarouselModule } from 'ngx-slick-carousel';
 
 @NgModule({
   imports: [
@@ -42,7 +45,10 @@ import { ProductDetailModelComponent } from './product-detail-model/product-deta
     // jhipster-needle-angular-add-module JHipster will add new module here
     EcommmerceFrameworkEntityModule,
     EcommmerceFrameworkAppRoutingModule,
-    NgxImageZoomModule.forRoot()
+    NgxImageZoomModule.forRoot(),
+    NgxPaginationModule,
+    BarRatingModule,
+    SlickCarouselModule
   ],
   schemas: [NO_ERRORS_SCHEMA],
   declarations: [JhiMainComponent, NavbarComponent, ErrorComponent, PageRibbonComponent, FooterComponent, ProductDetailModelComponent],

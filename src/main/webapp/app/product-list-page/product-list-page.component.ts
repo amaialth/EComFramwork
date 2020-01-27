@@ -6,6 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./product-list-page.component.scss']
 })
 export class ProductListPageComponent implements OnInit {
+  // Pagination parameters.
+  p: Number = 1;
+  count: Number = 5;
   constructor() {}
 
   ngOnInit() {}

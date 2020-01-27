@@ -4,7 +4,7 @@
             <div *ngIf="images">
                 <div class="top-title">Hot Deals</div>
                     <owl-carousel-o [options]="customOptions" #owlCar>
-                        <ng-container *ngFor="let image of images">
+                        <ng-container *ngFor="let image of images | paginate: { itemsPerPage: count, currentPage: p }">
                             <ng-template carouselSlide [id]="image.id" [width]="image.width">
                                 <div class="product-item">
                                     <div class="pi-img-wrapper">
@@ -26,10 +26,13 @@
                 </div>
         </div>
     </div>
+    Including the pagination control.
+  <div class="text-right">
+    <pagination-controls (pageChange)="p = $event"></pagination-controls>
+  </div>
     </div>-->
-    <div class="">
         <div class="row"> 
-        <div class="col-sm-3 py-2">
+        <div class="col-sm-6 col-md-6 col-xl-3 col-lg-3">
             <figure class="card card-product h-100">
                 <div class="img-wrap"><img src="C:\Users\Anbumani\Downloads\bootstrap-ecommerce-uikit\bootstrap-ecommerce-uikit\ui-ecommerce\images\items\1.jpg"></div>
                 <figcaption class="info-wrap card-body">
@@ -56,7 +59,7 @@
                 </div> <!-- bottom-wrap.// -->
             </figure>
         </div> <!-- col // -->
-        <div class="col-sm-3 py-2">
+        <div class="col-sm-6 col-md-6 col-xl-3 col-lg-3">
             <figure class="card card-product border-0 h-100">
                 <div class="img-wrap"><img src="C:\Users\Anbumani\Downloads\bootstrap-ecommerce-uikit\bootstrap-ecommerce-uikit\ui-ecommerce\images\items\2.jpg"> </div>
                 <figcaption class="info-wrap card-body">
@@ -83,7 +86,7 @@
                 </div> <!-- bottom-wrap.// -->
             </figure>
         </div> <!-- col // -->
-        <div class="col-sm-3 py-2">
+        <div class="col-md-6 col-xl-3 col-lg-3">
             <figure class="card card-product border-0 h-100">
                 <div class="img-wrap"><img src="C:\Users\Anbumani\Downloads\bootstrap-ecommerce-uikit\bootstrap-ecommerce-uikit\ui-ecommerce\images\items\3.jpg"></div>
                 <figcaption class="info-wrap card-body">
@@ -110,7 +113,7 @@
                 </div> <!-- bottom-wrap.// -->
             </figure>
         </div> <!-- col // --> 
-        <div class="col-sm-3 py-2">
+        <div class="col-md-6 col-xl-3 col-lg-3">
             <figure class="card card-product border-0 h-100">
                 <div class="img-wrap"><img src="C:\Users\Anbumani\Downloads\bootstrap-ecommerce-uikit\bootstrap-ecommerce-uikit\ui-ecommerce\images\items\3.jpg"></div>
                 <figcaption class="info-wrap card-body">
@@ -137,7 +140,7 @@
                 </div> <!-- bottom-wrap.// -->
             </figure>
         </div> <!-- col // -->
-        <div class="col-sm-3 py-2">
+        <div class="col-md-6 col-xl-3 col-lg-3">
             <figure class="card card-product border-0 h-100">
                 <div class="img-wrap"><img src="C:\Users\Anbumani\Downloads\bootstrap-ecommerce-uikit\bootstrap-ecommerce-uikit\ui-ecommerce\images\items\5.jpg"></div>
                 <figcaption class="info-wrap card-body">
@@ -164,5 +167,6 @@
                 </div> <!-- bottom-wrap.// -->
             </figure>
         </div> <!-- col // -->
-        </div>
-        
+</div>
+<bar-rating [(rate)]="rate" [max]="5"></bar-rating>
+<jhi-product-card-ladscape></jhi-product-card-ladscape>

@@ -19,6 +19,8 @@ import { ProductListPageComponent } from '../product-list-page/product-list-page
 import { BrandFilterComponent } from '../brand-filter/brand-filter.component';
 import { PriceFilterComponent } from '../price-filter/price-filter.component';
 import { CustomerReviewFilterComponent } from '../customer-review-filter/customer-review-filter.component';
+import { ProductCardLadscapeComponent } from '../product-card-ladscape/product-card-ladscape.component';
+import { CategoryPageComponent } from '../category-page/category-page.component';
 @NgModule({
   imports: [EcommmerceFrameworkSharedModule, RouterModule.forRoot(HOME_ROUTE), CarouselModule],
   declarations: [
@@ -37,7 +39,9 @@ import { CustomerReviewFilterComponent } from '../customer-review-filter/custome
     ProductListPageComponent,
     BrandFilterComponent,
     PriceFilterComponent,
-    CustomerReviewFilterComponent
+    CustomerReviewFilterComponent,
+    ProductCardLadscapeComponent,
+    CategoryPageComponent
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
